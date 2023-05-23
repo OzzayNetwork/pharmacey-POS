@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- index.html   13:53:02 GMT -->
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>PaySol | Connecting your to your world</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="POS Admin portal meant for businesses such as restaurants, wines and spirits and so on" name="description" />
+     <meta content="Levetot" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- date range picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body data-topbar="dark" data-layout="horizontal">
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-chase">
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Begin page -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+       
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo.svg" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-dark.png" alt="" height="17">
+                            </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-light.svg" alt="" height="60">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-light.png" alt="" height="37">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect d-lg-none" data-bs-toggle="collapse" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    <!-- App Search-->
+
+                    <nav class="navbar navbar-expand p-0 header-nav d-none d-lg-block">
+                        <div class="collapse navbar-collapse h-100" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto h-100">
+                            <li class="nav-item active h-100 d-flex justify-content-center align-items-center">
+                              <a class="nav-link h-100 d-flex justify-content-center align-items-center px-4 waves-effect" href="index.html"> <i class="bx bx-receipt mr-7px"></i>POS <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item justify-content-center align-items-center h-100">
+                              <a class="nav-link h-100 d-flex justify-content-center align-items-center px-4 waves-effect" href="my-stats.html"><i class="mdi mdi-chart-line mr-7px"></i> My Stats</a>
+                            </li>
+
+                            <li class="nav-item justify-content-center align-items-center h-100">
+                                <a class="nav-link h-100 d-flex justify-content-center align-items-center px-4 waves-effect" href="pending-payments.html"><i class="mdi mdi-file-document-outline mr-7px"></i> Pending Bills</a>
+                              </li>
+
+                            <li class="nav-item justify-content-center align-items-center h-100">
+                                <a class="nav-link h-100 d-flex justify-content-center align-items-center px-4 waves-effect" href="my-reports.html"><i class="mdi mdi-account-cash-outline mr-7px"></i> My Sales</a>
+                            </li>
+
+                            <li class="nav-item justify-content-center align-items-center h-100">
+                                <a class="nav-link h-100 d-flex justify-content-center align-items-center px-4 waves-effect" href="products-stock-reports.html"><i class="mdi mdi-storefront-outline mr-7px"></i> Stock Keeping</a>
+                            </li>
+
+                            <li class="nav-item justify-content-center align-items-center h-100">
+                                <a class="nav-link h-100 d-flex justify-content-center align-items-center px-4 waves-effect" href="items-products.html"><i class="bx bx-restaurant mr-7px"></i> Items</a>
+                            </li>
+                           
+                          </ul>
+                          
+                        </div>
+                      </nav>
+                   
+                </div>
+
+                <div class="d-flex">
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                            <i class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn d-none header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-bell bx-tada"></i>
+                            <span class="badge bg-danger rounded-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class="bx bx-cart"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-3.jpg"
+                                            class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-4.jpg"
+                                            class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-henry">Adroa Balinda</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="myprofile.html"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">My Profile</span></a>
+                            <a class="dropdown-item" href="my-logs.html"><i class="bx bx-time font-size-16 align-middle me-1"></i> <span key="t-profile">My Logs</span></a>
+                            <a class="dropdown-item" href="auth-lock-screen.html"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu d-lg-none">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="bx bx-receipt"></i><span>POS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="my-stats.html" class="waves-effect">
+                                <i class="mdi mdi-chart-line"></i><span>My Stats</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pending-payments.html" class="waves-effect">
+                                <i class="mdi mdi-file-document-outline"></i><span>Pending Bills</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="my-reports.html" class="waves-effect">
+                                <i class="mdi mdi-account-cash-outline"></i><span>My Sales</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products-stock-reports.html" class="waves-effect">
+                                <i class="mdi mdi-storefront-outline"></i><span>Stock Keeping</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="items-products.html" class="waves-effect">
+                                <i class="bx bx-restaurant"></i><span>Items</span>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+
+       
+
+        <!-- modals -->
+            <!-- customer Details -->
+            <div class="modal fade" id="customer-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-radius-0">
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Transaction Details</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </span>
+                        </div>
+                        <div class="modal-body text-capitalize">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <span class="badge rounded-pill badge-soft-success text-uppercase d-none">MPESA Transaction</span>
+                                <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                               </span>
+                            </div>
+                            <div class="payment-panel-parent">
+                                <div class="d-flex justify-content-between align-items-center flex-column">
+                                    <div class="flex-shrink-0 me-3 mt-4 mb-3">
+                                        <div class="avatar-md mx-auto "><span class="avatar-title rounded-circle bg-random font-size-24 ">AW</span></div>
+                                        <img class="rounded-circle avatar-sm d-none" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="65">
+                                    </div>
+                                    <h4 class="mb-0 text-uppercase">Alex Wanjala</h4>
+                                    <p class="text-muted text-uppercase mb-1">Customer ID: 1234HYI</p>
+                                    <span class="text-uppercase badge badge-soft-dark mt-4">Loyalty Points</span>
+                                    <h2 class=" text-uppercase mt-1 mb-2"><span class="">25.34</span></h2>
+                                   
+                                </div>
+                                
+                                <p class="text-uppercase mt-2 text-center">Loyalty Points Value <span class="fw-semibold">KES 5.00</span> </p>
+                                <div class="px-4 pt-3 mt-3 px-sm-0">
+                                    <div class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-xs me-3">
+                                                    <span class="avatar-title rounded-circle bg-success text-white font-size-18"><i class="mdi mdi-phone"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <h6 class="mb-0 text-capitalize">Phone Number</h6>
+                                                <p class="mb-0 p-0 text-capitalize">0704 549 859</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-xs me-3">
+                                                    <span class="avatar-title rounded-circle bg-info text-white font-size-18"><i class="mdi mdi-email-outline"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <h6 class="mb-0 text-capitalize">Email Address</h6>
+                                                <p class="mb-0 p-0 text-capitalize">email@mail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- customer Details -->
+
+            <!-- Transaction Details -->
+            <div class="modal fade" id="transaction-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-radius-0">
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Transaction Details</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </span>
+                        </div>
+                        <div class="modal-body text-capitalize">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA Transaction</span>
+                                <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                               </span>
+                            </div>
+                            <div class="payment-panel-parent">
+                                <div class="d-flex justify-content-between align-items-center flex-column">
+                                    <div class="flex-shrink-0 me-3 mt-4 mb-3">
+                                        <div class="avatar-md mx-auto "><span class="avatar-title rounded-circle bg-random font-size-24 ">CS</span></div>
+                                        <img class="rounded-circle avatar-sm d-none" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="65">
+                                    </div>
+                                    <h4 class="mb-0 text-uppercase">Calistus Simiyu</h4>
+                                    <p class="text-muted text-uppercase mb-1">Cashier ID: 1234HYI</p>
+                                    <span class="text-uppercase badge badge-soft-info mt-4">Transaction Amount</span>
+                                    <h2 class=" text-uppercase mt-1 mb-4"><span class="">KES 450.00</span></h2>
+                                   
+                                </div>
+                                <div
+                                    class="px-4 mb-4 transactions-details-table text-left d-flex justify-items-center align-items-center w-100 px-sm-0">
+                                    <div class="d-flex flex-column boarder-grey border-1 justify-content-center align-items-center w-100  p-3">
+                                        <table class="table table-borderless mb-0 mt-0 table-sm single-receipt">
+                                            <thead class="table-border">
+                                                <tr>
+                                                    <th colspan="4" class="text-black text-uppercase pb-0 mb-0">
+                                                        <blockquote class=""><span class="text-muted">Receipt No.</span> F32GDV9GC0
+                                                        </blockquote>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col" colspan="2">Items</th>
+                                                    <th scope="col" class="text-center">Qty</th>
+                                                    <th class="text-right">Price</th>
+                                                    <th scope="col" class="text-right">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="text-capitalize">
+                                                    <th scope="row">1.</th>
+                                                    <td>French Fries</td>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-right">KES&nbsp;100.00</td>
+                                                    <td class="text-right">KES&nbsp;300.00</td>
+                                                </tr>
+                                                <tr class="text-capitalize">
+                                                    <th scope="row">2.</th>
+                                                    <td>Samosa</td>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-right">KES&nbsp;50.00</td>
+                                                    <td class="text-right">KES&nbsp;150.00</td>
+                                                </tr>
+                                            </tbody>
+                                            
+                                            <tfoot class="table-borderless">
+                                                <tr class="table-bo">
+                                                    <th colspan="2" class="pt-3 text-uppercase">Total</th>
+                                                    <th class="text-center pt-3">6</th>
+                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;450.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2" class="pt-3 text-uppercase">MPESA Paid</th>
+                                                    <th class="text-center pt-3"></th>
+                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;400</th>
+                                                </tr>
+
+                                                <tr>
+                                                    <th colspan="2" class="pt-3 text-uppercase">Cash Paid</th>
+                                                    <th class="text-center pt-3"></th>
+                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;100</th>
+                                                </tr>
+
+                                                <tr>
+                                                    <th colspan="2" class="pt-3 text-uppercase">Change</th>
+                                                    <th class="text-center pt-3"></th>
+                                                    <th colspan="2" class="text-right pt-3">KES 50</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                                <p class="text-uppercase mt-3">MPESA Number <span class="fw-semibold">0704 549 859</span> </p>
+                                <div class="px-4 pt-3 mt-3 px-sm-0">
+                                    <div
+                                        class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-xs me-3"><span
+                                                        class="avatar-title rounded-circle bg-danger text-white font-size-18"><i
+                                                            class="mdi mdi-arrow-down-bold"></i></span></div>
+                                            </div>
+                                            <div class="text-left">
+                                                <h6 class="mb-0 text-capitalize">Customer <span class="fw-semibold">Alex Wanjala</span>
+                                                    <small> ( Customer Code: 12345HTGF )</small></h6>
+                                                <p class="mb-0 p-0 text-capitalize">Yesterday at 9:08 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary waves-effect waves-light w-100"><i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Transaction Details -->
+        <!-- end of modals -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">My Sales Report</h4>
+
+                                <div class="page-title-right d-none">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Product Sales</a></li>
+                                        <li class="breadcrumb-item active">Sales Report</li>
+                                    </ol>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <!-- eTransactions table -->
+
+                   
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                
+                                <div class="card-header py-3">
+                                    <div class="d-flex tbl-filter-container justify-content-between align-items-center py-0 m-0">
+                                        <div class="d-flex the-filters">
+                                            <div class="d-none">
+                                                <div class="dropdown d-inline-block">
+                                                    <button type="button" class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4">
+                                                            <span class="text-primary">Filter By Cashier</span>
+                                                                <h5 class="mb-0 pb-0 text-black text-capitalize">All Cashiers</h5>
+                                                        </span>
+                                                        <i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end w-100 text-capitalize">
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item active" href="javascript: void(0);"><span>All Cashiers</span></a>
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item" href="javascript: void(0);"><span>Alex Wanjala</span></a>
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item" href="javascript: void(0);"><span>Kelvin Kiptum</span></a>
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item" href="javascript: void(0);"><span>Andrew Kinoti</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="dropdown d-inline-block">
+                                                    <button type="button" class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4">
+                                                            <span class="text-primary">Filter By Transaction</span>
+                                                            <h5 class="mb-0 pb-0 text-black text-capitalize">All Transactions</h5>
+                                                        </span>
+                                                        <i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end w-100 text-capitalize" >
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Mpesa</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Cash</span></a>
+                                                        <a class="dropdown-item active" href="javascript: void(0);"><span>Split</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="dropdown d-inline-block">
+                                                    <button type="button"class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4">
+                                                            <span class="text-primary">Filter By Client</span>
+                                                            <h5 class="mb-0 pb-0 text-black">Andrew Mwangi</h5>
+                                                        </span>
+                                                        <i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end w-100 text-capitalize">
+                                                        <a class="dropdown-item active" href="javascript: void(0);"><span>All Clients</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Simiren Nkere</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>John Mwangi</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Joy Mwaura</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="dropdown d-inline-block"><button type="button"
+                                                        class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="reportrange"><span
+                                                            class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4"><span
+                                                                class="text-primary">Filter By Date</span>
+                                                            <h5 class="mb-0 pb-0 text-black selected-date">Feb 15, 2023 - Mar 16, 2023</h5>
+                                                        </span><i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right text-uppercase pr-4"><button type="button"
+                                                class="btn btn-outline-white waves-effect waves-light text-uppercase"><i
+                                                    class="mdi mdi-refresh font-size-24 align-middle me-2"></i> Reset Filters</button></div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="datatable-buttons" class="table table-hover">
+                                            <thead class="table-dark text-capitalize">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Receipt No.</th>
+                                                    <th>Client</th>
+                                                    <th>Items</th>
+                                                    <th class="">Payment Method</th>
+                                                    <th>Date</th>
+                                                    <th>Served By</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th></th>
+                                                    
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tfoot class="table-light">
+                                                <tr>
+                                                    <th colspan="2">5 Receipts</th>
+                                                    <th>4 Customers</th>
+                                                    <th colspan="">12 Products</th>
+                                                    <td colspan="2" class="text-uppercase">
+                                                        <span class="pr-2">Cash <span class="fw-semibold">7,900(18%)</span></span>
+                                                        <span>Mpesa <span class="fw-semibold">60,000(82%)</span></span>
+                                                    </td>
+                                                    <th>2 Cashiers</th>
+                                                    <th class="text-right text-uppercase">
+                                                        kes 67,900
+                                                    </th>
+                                                    <th></th>
+                                                  </tr>
+                                            </tfoot>
+    
+    
+                                            <tbody class="table-sm">
+                                              <tr>
+                                                <th>1.</th>
+                                                <td>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item d-none" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>2.</th>
+                                                <td>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item d-none" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>3.</th>
+                                                <td>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item d-none" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>4.</th>
+                                                <td>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item d-none" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>5.</th>
+                                                <td>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                    <span class="badge rounded-pill badge-soft-dark text-uppercase">cash</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item d-none" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <!-- end row -->
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <!-- Transaction Modal -->
+            <div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="transaction-detailModalLabel">Transactions Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+
+                            <div class="table-responsive mt-4">
+                                <table class="table align-middle table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 30%">
+                                                <p class="mb-0">Car Plate Number</p>
+                                            </td>
+                                            <td style="width: 25%">
+                                                <h5 class="mb-0 text-uppercase">UAG 1235p</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">Vehicle Category</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">Salon Car</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">Payment Date</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">22 Apr 2022 06:54PM</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">San Diego</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">1,026</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p class="mb-0 pb-0">Amount Paid</p>
+                                                <h3>UGX 2,000</h3>
+                                            </td>
+                                        </tr>
+                                        <TR>
+                                            <td col-span="2">
+                                                <p class="mb-2">Attended By<span class="text-primary"> Alex Sebeye</span></p>
+                                                <p class="mb-4">Toll taker's No. <span class="text-primary">0704549859</span></p>
+                                            </td>
+                                        </TR>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+
+            <!-- filter right of canvus -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Filter Transactions</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="col-12 mb-4">
+                        <div class="alert alert-info alert-border" role="alert">
+                            Use this section to filter the table to the way of your liking. Remember to submit your selection so as to submit the selections
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Select a date range</label>
+
+                            <div class="input-daterange input-group" id="datepicker6" data-date-format="dd M, yyyy" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker6'>
+                                <input type="text" class="form-control date-drop-input" name="start" placeholder="Start Date" readonly />
+                                <input type="text" class="form-control date-drop-input" name="end" placeholder="End Date" readonly />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Amount range</label>
+
+                            <div class="input-daterange input-group">
+                                <input type=" text " class="form-control " name="" placeholder="Min Amount" />
+                                <input type="text " class="form-control " name="" placeholder="Max Amount" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Toll takers</label>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="allTollTakers" checked>
+                                        <label class="form-check-label text-capitalize" for="allTollTakers">
+                                            All toll takers
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker1">
+                                        <label class="form-check-label text-capitalize" for="tollTaker1">
+                                            Kelvin Njuguna
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker3">
+                                        <label class="form-check-label text-capitalize" for="tollTaker3">
+                                            Samoli Chillo
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker4">
+                                        <label class="form-check-label text-capitalize" for="tollTaker4">
+                                            Alex Wanjala
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker5">
+                                        <label class="form-check-label text-capitalize" for="tollTaker5">
+                                            Edwin Kiploman
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <button type="button" class="btn btn-primary waves-effect waves-light w-100">
+                                <i class="mdi mdi-filter-variant font-size-16 align-middle me-2"></i> Filter Table
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- of canvus -->
+
+
+
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © PaySol POS
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="text-sm-end d-sm-block ">
+                                Connecting you to your World
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay "></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
+
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+    <script src="assets/libs/jszip/jszip.min.js "></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+
+    <script src="assets/libs/select2/js/select2.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- date range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- end of dtae range picker -->
+
+    <!-- form advanced init -->
+    <script src="assets/js/pages/form-advanced.init.js"></script>
+
+
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js "></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
+</body>
+<!-- index.html   13:55:49 GMT -->
+
+</html>
